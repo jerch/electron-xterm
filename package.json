@@ -1,0 +1,22 @@
+{
+  "name": "electron-xterm",
+  "version": "0.0.1",
+  "description": "Minimal xterm in electron.",
+  "main": "main.js",
+  "scripts": {
+    "build": "cd node_modules && git clone https://github.com/jerch/xterm.js && mv xterm.js xterm && cd xterm && npm install && npm run build",
+    "switch-fast" : "cd node_modules/xterm && git checkout insanely_fast && npm run watch",
+    "switch-master": "cd node_modules/xterm && git checkout master && npm run build",
+    "start": "electron ."
+  },
+  "repository": "https://github.com/jerch/electron-xterm",
+  "keywords": [],
+  "author": "jerch",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^2.0.0"
+  },
+  "dependencies": {
+    "node-pty": "^0.7.6"
+  }
+}
